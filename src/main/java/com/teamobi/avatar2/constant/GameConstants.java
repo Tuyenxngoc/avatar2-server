@@ -14,5 +14,7 @@ public class GameConstants {
     public static final int MIN_XP = -MAX_INT_VALUE;
 
     public static final String RESOURCE_BASE_URL = "src/main/resources";
-
+    public static final String RESOURCE_HD_PATH = RESOURCE_BASE_URL + "/hd";
+    public static final String RESOURCE_MEDIUM_PATH = RESOURCE_BASE_URL + "/medium";
+    public static final String RESOURCE_OBJECT_PATH = "%s/object/%d.png";
 }

@@ -9,7 +9,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class User {
-    private String userId;
+    private int userId;
+    private boolean gender;
     private String username;
     private Short clanId;
     private int xu;

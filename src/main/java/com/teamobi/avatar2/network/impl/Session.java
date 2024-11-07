@@ -1,6 +1,7 @@
 package com.teamobi.avatar2.network.impl;
 
 import com.teamobi.avatar2.constant.Cmd;
+import com.teamobi.avatar2.constant.GameConstants;
 import com.teamobi.avatar2.handler.IMessageHandler;
 import com.teamobi.avatar2.handler.impl.MessageHandler;
 import com.teamobi.avatar2.model.User;
@@ -45,6 +46,7 @@ public class Session implements ISession {
     private String version;
     private byte provider;
     private User user;
+    private String resourcePath = GameConstants.RESOURCE_MEDIUM_PATH;
 
     public Session(long sessionId, Socket socket) throws IOException {
         this.sessionId = sessionId;
@@ -130,6 +132,26 @@ public class Session implements ISession {
     @Override
     public void setProvider(byte provider) {
         this.provider = provider;
+    }
+
+    @Override
+    public String getResourcePath() {
+        return resourcePath;
+    }
+
+    @Override
+    public void setResourcePath(String path) {
+        resourcePath = path;
+    }
+
+    @Override
+    public User getUser() {
+        return user;
+    }
+
+    @Override
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override

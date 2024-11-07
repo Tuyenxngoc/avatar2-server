@@ -27,8 +27,12 @@ public class MessageHandler implements IMessageHandler {
     public void onMessage(IMessage ms) {
         try {
             switch (ms.getCommand()) {
+                case Cmd.GET_IMG_ICON -> messageService.sendImageIcon(ms);
+
                 case Cmd.GET_KEY -> session.sendKeys();
+
                 case Cmd.GET_HANDLER -> messageService.setSessionHandler(ms);
+
                 default -> log.warn("Command {} is not supported", ms.getCommand());
             }
         } catch (Exception e) {

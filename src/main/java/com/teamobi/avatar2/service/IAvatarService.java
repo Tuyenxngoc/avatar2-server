@@ -10,4 +10,8 @@ public interface IAvatarService {
     void getNumber(IMessage message);
 
     void login(IMessage message);
+
+    void checkExpiredPet(IMessage message);
+
+    void getBig(IMessage message);
 }
